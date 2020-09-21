@@ -1,0 +1,79 @@
+<div class="container">
+  <div class="row pt-1 pb-3">
+    <div class="login-form offset-md-3 col-md-6">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <img src="/assets/img/logo-photo-ecuador.png"
+               alt="photo-logo"
+               width="40%">
+        </div>
+        <div class="text-center pt-3 pb-3 col-md-12">
+          <h1><b>Bienvenido!</b></h1>
+        </div>
+      </div>
+      <form #loginForm="ngForm"
+            (ngSubmit)="Login(loginForm)">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <label for="emailId">
+                <b>Correo Electr&oacute;nico:</b>
+              </label>
+              <input id="emailId"
+                     class="form-control"
+                     placeholder="mario.perez@gmail.com"
+                     type="email"
+                     [(ngModel)]="credentials.email"
+                     name="email" required
+                     #emailField="ngModel"/>
+              <div *ngIf="emailField.touched && emailField.errors">
+                <p *ngIf="emailField.errors.required">
+                  <small class="form-text text-danger">
+                    Error: Campo requerido
+                  </small>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <label for="passwordId">
+                <b>Password:</b>
+              </label>
+              <input id="passwordId"
+                     type="password"
+                     placeholder="*********"
+                     class="form-control"
+                     minlength="8"
+                     [(ngModel)]="credentials.password"
+                     name="password" required
+                     #passwordField="ngModel"/>
+              <div *ngIf="passwordField.touched && emailField.errors">
+                <p *ngIf="emailField.errors.required">
+                  <small class="form-text text-danger">
+                    Error: Campo requerido
+                  </small>
+                </p>
+                <p *ngIf="emailField.errors.length">
+                  <small class="form-text text-danger">
+                    Error: Longitud m&iacute;nima del password de 8 d&iacute;gitos
+                  </small>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row pt-3">
+          <div class="offset-md-4 col-md-6">
+            <button class="text-center login" type="submit"
+                    [disabled]="!loginForm.form.valid">
+              <i class="fas fa-sign-in-alt"></i>  Ingresar
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

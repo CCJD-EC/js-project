@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12"
+         style="padding-bottom: 100px">
+      <div class="toolbar" role="banner">
+        <div class="icon-main">
+          <a [routerLink]="['/home']">
+            <img src="/assets/img/logo-photo-ecuador.png"
+                 class="logo-icon" alt="logo-icon">
+          </a>
+        </div>
+        <div class="spacer">
+          <nav>
+            <a [routerLink]="['/home']" class="home"><i class="fas fa-home"></i> Home</a>
+            <a href="" class="contact"><i class="fas fa-comments"></i> Contacto</a>
+            <a href="" class="aboutUs"><i class="fas fa-users"></i> Sobre Nosotros</a>
+          </nav>
+        </div>
+        <a [routerLink]="['/login']" routerLinkActive="active" class="login">
+          <i class="fas fa-user"></i> Login
+        </a>
+        <a [routerLink]="['/signIn']" class="sign-in"><i class="fas fa-sign-in-alt"></i> Registrate</a>
+      </div>
+    </div>
+  </div>
+</div>
+
