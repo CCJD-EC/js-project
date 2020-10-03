@@ -1,0 +1,19 @@
+<div class="p-grid">
+  <div class="p-col-12">
+    <h5>Comentario</h5>
+    <textarea
+      rows="2"
+      cols="52"
+      pInputTextarea
+      [(ngModel)]="description"></textarea>
+  </div>
+  <div class="p-col-12 p-text-right pt-0">
+    <button  pButton pRipple
+             type="button"
+             (click)="newComment()"
+             label="Enviar"
+             icon="pi pi-comments"
+             class="p-button-rounded"></button>
+  </div>
+</div>
+<br>

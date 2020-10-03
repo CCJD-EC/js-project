@@ -1,0 +1,184 @@
+<p-toast></p-toast>
+<div class="p-grid">
+  <div class="p-col-12">
+    <div class="p-grid">
+      <div class="p-col-12 p-text-center">
+        <h1>ADMINISTRA TU ALBUM</h1>
+      </div>
+    </div>
+    <div class="card" style="height: 40px">
+      <p-toolbar styleClass="p-mb-4 p-text-center">
+        <ng-template pTemplate="left">
+          <button pButton pRipple
+                  label="Nuevo Album"
+                  icon="pi pi-plus"
+                  class="p-button-success p-mr-2"
+                  (click)="openNew()"></button>
+          <button pButton pRipple
+                  style="height: 45px"
+                  [label]="Delete"
+                  icon="pi pi-trash"
+                  class="p-button-danger"
+                  (click)="deleteSelectedsUsers()"
+                  [disabled]="!selectedAlbum || !selectedAlbum.length"></button>
+        </ng-template>
+      </p-toolbar>
+      <p-table #dt [value]="albums" [rows]="10"
+               [paginator]="true"
+               [globalFilterFields]="['model']"
+               [(selection)]="selectedAlbum"
+               [rowHover]="true" dataKey="id"
+               currentPageReportTemplate="Mostrando {first} de {last} de las {totalRecords} existentes"
+               [showCurrentPageReport]="true">
+        <ng-template pTemplate="caption">
+          <div class="p-d-flex p-ai-center p-jc-between">
+            <h5 class="p-m-0">Administrar ALBUMS</h5>
+          </div>
+        </ng-template>
+        <ng-template pTemplate="header">
+          <tr style="font-size: 10px">
+            <th style="width: 3rem">
+              <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+            </th>
+            <th pSortableColumn="name">Nombre
+              <p-sortIcon field="name"></p-sortIcon>
+            </th>
+            <th pSortableColumn="owner">Propietario
+              <p-sortIcon field="owner"></p-sortIcon>
+            </th>
+            <th pSortableColumn="photo">Fotos
+              <p-sortIcon field="foto"></p-sortIcon>
+            </th>
+            <th pSortableColumn="post">Post Mencionados
+              <p-sortIcon field="post"></p-sortIcon>
+            </th>
+            <th></th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-album>
+          <tr style="font-size: 12px">
+            <td>
+              <p-tableCheckbox [value]="album"></p-tableCheckbox>
+            </td>
+            <td>{{album.name}}</td>
+            <td>{{getUser(album)}}</td>
+            <td><div *ngFor="let i of album.photos">
+              {{getPhotos(i)}}
+            </div></td>
+            <td>{{album.album_posts}}</td>
+            <td>
+              <button pButton pRipple icon="pi pi-pencil" class="p-button-rounded p-button-success p-mr-2"
+                      ></button>
+              <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-warning"
+                     ></button>
+            </td>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="summary">
+          <div class="p-d-flex p-ai-center p-jc-between">
+            En total existen {{albums ? albums.length : 0 }} albums.
+          </div>
+        </ng-template>
+      </p-table>
+    </div>
+<!--
+    <p-dialog [(visible)]="albumDialog"
+              [style]="{width: '450px'}"
+              header="Detalles del Usuario" [modal]="true"
+              styleClass="p-fluid">
+      <ng-template pTemplate="content">
+        <div class="p-field">
+          <label for="DNI">DNI:</label>
+          <input type="text" id="DNI" pInputText [(ngModel)]="album.DNI">
+          <small class="p-invalid"
+                 *ngIf="submitted && !album.DNI">El DNI es requerido</small>
+        </div>
+        <div class="p-field">
+          <label>Nombre:</label>
+          <input type="text"
+                 id="first_name"
+                 name="first_name"
+                 pInputText
+                 [(ngModel)]="album.last_name">
+          <small class="p-invalid" *ngIf="submitted && !album.first_name">El nombre es requerida</small>
+        </div>
+        <div class="p-field">
+          <label>Apellido:</label>
+          <input type="text"
+                 id="last_name"
+                 name="last_name"
+                 pInputText
+                 [(ngModel)]="album.last_name">
+          <small class="p-invalid" *ngIf="submitted && !album.last_name">El apellido es requerida</small>
+        </div>
+        <div class="p-field">
+          <label>Fecha de Nacimiento:</label>
+          <input type="date"
+                 id="birth_date"
+                 name="birth_date"
+                 pInputText
+                 [(ngModel)]="album.birth_date">
+          <small class="p-invalid" *ngIf="submitted && !album.birth_date">La fecha de nacimiento es requerida</small>
+        </div>
+        <div class="p-field">
+          <label>Direcci&oacute;n:</label>
+          <input type="text"
+                 id="address"
+                 name="address"
+                 pInputText
+                 [(ngModel)]="album.address">
+          <small class="p-invalid" *ngIf="submitted && !album.address">La direccion es requerida</small>
+        </div>
+        <div class="p-field">
+          <label>Tel&eacute;fono:</label>
+          <input type="text"
+                 id="phone_number"
+                 name="phone_number"
+                 pInputText
+                 [(ngModel)]="album.phone_number">
+          <small class="p-invalid" *ngIf="submitted && !album.phone_number">El tel&eacute;fono es requerida</small>
+        </div>
+        <div class="p-field">
+          <label>Password:</label>
+          <input type="text"
+                 id="password"
+                 name="password"
+                 pInputText
+                 [(ngModel)]="album.password">
+          <small class="p-invalid" *ngIf="submitted && !album.password">El password es requerida</small>
+        </div>
+        <div class="p-field">
+          <label>Roles:</label>
+          <p-dropdown [options]="listPhotos"
+                      [(ngModel)]="selectedUser"
+                      placeholder="Seleccione un rol"
+                      optionLabel="name"
+                      [showClear]="true"></p-dropdown>
+          <small class="p-invalid" *ngIf="submitted && !album.roles">Los roles son requeridos</small>
+        </div>
+        <div class="p-field">
+          <label>Albums:</label>
+          <p-dropdown [options]="listUsers"
+                      [(ngModel)]="selectedPhoto"
+                      placeholder="Seleccione un album"
+                      optionLabel="name"
+                      [showClear]="true"></p-dropdown>
+          <small class="p-invalid" *ngIf="submitted && !album.albums">Los albums son requeridos</small>
+        </div>
+
+      </ng-template>
+
+      <ng-template pTemplate="footer">
+        <button pButton pRipple label="Cancelar"
+                icon="pi pi-times"
+                class="p-button-text" (click)="hideDialog()"></button>
+        <button pButton pRipple
+                label="Guardar" icon="pi pi-check"
+                class="p-button-text" ></button>
+      </ng-template>
+    </p-dialog>-->
+
+  </div>
+  <p-confirmDialog [style]="{width: '450px'}"></p-confirmDialog>
+
+</div>

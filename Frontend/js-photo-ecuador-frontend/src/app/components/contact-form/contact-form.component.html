@@ -1,0 +1,29 @@
+<div class="col-md-12 cover-img p-text-center">
+  <h1>Contactanos</h1>
+<div class="col-12 pt-20">
+  <form action="">
+    <div class="p-field">
+      <label for="email">Email:</label>
+      <input type="email" id="email" pInputText [(ngModel)]="receiver">
+      <small class="p-invalid"
+             *ngIf="submitted && !receiver">El corroe es requerido</small>
+    </div>
+    <div class="p-field">
+      <label for="subject">Asunto:</label>
+      <input type="text" id="subject" pInputText [(ngModel)]="subject">
+      <small class="p-invalid"
+             *ngIf="submitted && !subject">El Asunto es requerido</small>
+    </div>
+    <div class="p-field">
+      <label for="text">Comentario:</label>
+      <input type="text" id="text" pInputText [(ngModel)]="text">
+      <small class="p-invalid"
+             *ngIf="submitted && !text">El comentario es requerido</small>
+    </div>
+    <button pButton pRipple
+            label="Enviar" icon="pi pi-envelope"
+            class="p-button-text"></button>
+  </form>
+</div>
+</div>
+

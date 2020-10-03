@@ -1,0 +1,280 @@
+<div class="container">
+  <div class="row pt-1 pb-3">
+    <div class="sign-in-form offset-md-3 col-md-6">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <img src="/assets/img/logo-photo-ecuador.png"
+               alt="photo-logo"
+               width="40%">
+        </div>
+        <div class="text-center pt-3 pb-3 col-md-12">
+          <h1><b>Registrate!</b></h1>
+        </div>
+      </div>
+      <form #signInForm="ngForm"
+            (ngSubmit)="signIn(signInForm)">
+        <!--Si esta en parentesis es un evento-->
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="firstNameId"><b>Nombre:</b></label>
+              <input id="firstNameId"
+                     class="form-control"
+                     type="text"
+                     placeholder="Ejemplo: Juan"
+                     minlength="3"
+                     [(ngModel)]="user.first_name"
+                     name="first_name" required
+                     #nameField="ngModel"/>
+            </div>
+            <div *ngIf="nameField.touched && nameField.errors">
+              <p *ngIf="nameField.errors.required">
+                <small class="form-text text-danger">
+                  Error: Campo requerido
+                </small>
+              </p>
+              <p *ngIf="nameField.errors.minlength">
+                <small class="form-text text-danger">
+                  Error: Longitud m&iacute;nima de 3
+                </small>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="lastNameId"><b>Apellido:</b></label>
+              <input id="lastNameId"
+                     class="form-control"
+                     type="text"
+                     minlength="3"
+                     placeholder="Ejemplo: Peréz"
+                     [(ngModel)]="user.last_name"
+                     name="last_name" required
+                     #lastNameField="ngModel"/>
+            </div>
+            <div *ngIf="lastNameField.touched && lastNameField.errors">
+              <p *ngIf="lastNameField.errors.required">
+                <small class="form-text text-danger">
+                  Error: Campo requerido
+                </small>
+              </p>
+              <p *ngIf="lastNameField.errors.minlength">
+                <small class="form-text text-danger">
+                  Error: Longitud m&iacute;nima de 3
+                </small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!--  Validacion de campos
+              - email
+              - maxlength="10"
+              - minlength="3"
+              - type="number"
+              - Con numeros => min="0"
+              - Con numeros => max="10"
+              - pattern = "[0-9]*" expresiones regulares
+              <input type="number" step="0.1" min="0" max="2">
+              sirve el step con saltos de 0.1 hasta el 2-->
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="DNIId"><b>C&eacute;dula:</b></label>
+              <input id="DNIId"
+                     class="form-control"
+                     placeholder="Ejemplo: 1735467890"
+                     type="text"
+                     minlength="10"
+                     pattern="[0-9]*"
+                     [(ngModel)]="user.DNI"
+                     name="DNI" required
+                     #DNIField="ngModel"/>
+              <div *ngIf="DNIField.touched && DNIField.errors">
+                <p *ngIf="DNIField.errors.required">
+                  <small class="form-text text-danger">
+                    Error: Campo requerido
+                  </small>
+                </p>
+                <p *ngIf="DNIField.errors.minlength">
+                  <small class="form-text text-danger">
+                    Error: Longitud m&iacute;nima de 10
+                  </small>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="phoneNumberId">
+                <b>Tel&eacute;fono</b></label>
+              <input id="phoneNumberId"
+                     class="form-control"
+                     placeholder="Ejemplo: 0983282123"
+                     type="text"
+                     minlength="10"
+                     pattern="[0-9]*"
+                     [(ngModel)]="user.phone_number"
+                     name="phoneNumber" required
+                     #phoneNumberField="ngModel"/>
+              <div *ngIf="phoneNumberField.touched && phoneNumberField.errors">
+                <p *ngIf="phoneNumberField.errors.required">
+                  <small class="form-text text-danger">
+                    Error: Campo requerido
+                  </small>
+                </p>
+                <p *ngIf="phoneNumberField.errors.minlength">
+                  <small class="form-text text-danger">
+                    Error: Longitud m&iacute;nima de 10
+                  </small>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-5">
+            <div class="form-group">
+              <label for="birthDateId">
+                <b>Fecha de Nacimiento:</b></label>
+              <input id="birthDateId"
+                     class="form-control"
+                     placeholder="Ejemplo: 10/10/2002"
+                     type="date"
+                     [(ngModel)]="user.birth_date"
+                     name="birthDate" required
+                     #birthDateField="ngModel"/>
+              <div *ngIf="birthDateField.touched && birthDateField.errors">
+                <p *ngIf="birthDateField.errors.required">
+                  <small class="form-text text-danger">
+                    Error: Campo requerido
+                  </small>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-7">
+            <div class="form-group">
+              <label for="addressId">
+                <b>Direcci&oacute;n</b></label>
+              <input id="addressId"
+                     class="form-control"
+                     placeholder="Ejemplo: Av. Amazonas y Av. Colón"
+                     type="text"
+                     minlength="10"
+                     [(ngModel)]="user.address"
+                     name="address" required
+                     #addressField="ngModel"/>
+              <div *ngIf="addressField.touched && addressField.errors">
+                <p *ngIf="addressField.errors.required">
+                  <small class="form-text text-danger">
+                    Error: Campo requerido
+                  </small>
+                </p>
+                <p *ngIf="addressField.errors.minlength">
+                  <small class="form-text text-danger">
+                    Error: Longitud m&iacute;nima de 10
+                  </small>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <label for="emailId">
+                <b>Correo Electr&oacute;nico:</b>
+              </label>
+              <input id="emailId"
+                     class="form-control"
+                     placeholder="mario.perez@gmail.com"
+                     type="email"
+                     [(ngModel)]="user.emailAddress"
+                     name="email" required
+                     #emailField="ngModel"/>
+              <div *ngIf="emailField.touched && emailField.errors">
+                <p *ngIf="emailField.errors.required">
+                  <small class="form-text text-danger">
+                    Error: Campo requerido
+                  </small>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="passwordId">
+                <b>Password:</b>
+              </label>
+              <input id="passwordId"
+                     type="password"
+                     placeholder="*********"
+                     class="form-control"
+                     minlength="8"
+                     [(ngModel)]="user.password"
+                     name="password" required
+                     #passwordField="ngModel"/>
+              <div *ngIf="passwordField.touched && emailField.errors">
+                <p *ngIf="emailField.errors.required">
+                  <small class="form-text text-danger">
+                    Error: Campo requerido
+                  </small>
+                </p>
+                <p *ngIf="emailField.errors.length">
+                  <small class="form-text text-danger">
+                    Error: Longitud m&iacute;nima del password de 8 d&iacute;gitos
+                  </small>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="confirmPasswordId">
+                <b>Confirmar Password:</b>
+              </label>
+              <input id="confirmPasswordId"
+                     type="password"
+                     placeholder="*********"
+                     class="form-control"
+                     minlength="8"
+                     [(ngModel)]="confirmPassword"
+                     name="confirmPassword" required
+                     #confirmPasswordField="ngModel"/>
+              <div *ngIf="confirmPasswordField.touched && confirmPasswordField.errors">
+                <p *ngIf="confirmPasswordField.errors.required">
+                  <small class="form-text text-danger">
+                    Error: Campo requerido
+                  </small>
+                </p>
+                <p *ngIf="emailField.errors.length">
+                  <small class="form-text text-danger">
+                    Error: Longitud m&iacute;nima del password de 8 d&iacute;gitos
+                  </small>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="termsAndConditionsId">
+              <label class="form-check-label" for="termsAndConditionsId">Acepta los t&eacute;rminos y condiciones</label>
+            </div>
+          </div>
+        </div>
+        <div class="row pt-3">
+          <div class="offset-md-4 col-md-6">
+            <button class="text-center sign-in" type="submit"
+                    [disabled]="!signInForm.form.valid">
+              Registrate Ahora!
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

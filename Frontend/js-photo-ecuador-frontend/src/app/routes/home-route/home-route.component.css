@@ -1,0 +1,35 @@
+.main-cover{
+  border-style: ridge;
+  border-radius: 10px;
+}
+.cover-size{
+  width: 800px;
+  height: 380px;
+}
+.cover-img{
+  border-style: outset;
+  border-radius: 30px;
+  background-color: #ffffff;
+}
+blockquote{
+  margin-top: 110px;
+}
+nav a:last-child{
+  border-radius:0 2px 2px 0;
+}
+
+
+
+.cover-behind{
+  position: relative
+}
+.cover-front{
+  position: absolute;
+  top: 10px;
+  left: 20px;
+}
+.parraf{
+  text-shadow: 2px 2px 5px #0c8da0;
+  font-style: italic;
+  font: italic bold 20px/30px Georgia, serif;
+}

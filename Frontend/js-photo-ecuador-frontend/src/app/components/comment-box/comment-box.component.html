@@ -1,0 +1,25 @@
+<div class="main-container">
+  <p-fieldset [style]="{height:'10%'}">
+    <p-header style="font-size: 12px ">
+      <div class="p-grid">
+        <div class="p-col-4 p-text-left" [style]="{width:'18%'}">
+          <img src="{{photo}}"
+               alt="user_profile"
+               width="70%"
+               height="150%"
+               style="border-radius: 60%">
+        </div>
+        <div class="p-col-6 p-text-left" style="font-size: 15px">
+          {{user_name}}
+        </div>
+      </div>
+    </p-header>
+    <p class="p-text-left">
+     <span class="p-grid">
+       <span class="p-col-12">
+          {{description}}
+       </span>
+     </span>
+    </p>
+  </p-fieldset>
+</div>
