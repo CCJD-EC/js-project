@@ -8,6 +8,9 @@ module.exports = {
 
   attributes: {
 
+    photo_url:{
+      type:'string'
+    },
     first_name: {
       type: 'string',
       required: true,
@@ -199,6 +202,12 @@ without necessarily having a billing card.`
     //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
     // n/a
 
+    // Login
+
+    isLogin:{
+      type: 'boolean',
+      defaultsTo: false
+    },
     // Relations
 
     roles:{
@@ -211,5 +220,9 @@ without necessarily having a billing card.`
       via: 'user_album'
     },
 
+    comments:{
+      collection: 'comments',
+      via: 'user_created'
+    }
   },
 };

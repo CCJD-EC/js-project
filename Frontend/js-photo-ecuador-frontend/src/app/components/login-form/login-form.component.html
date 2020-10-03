@@ -12,7 +12,7 @@
         </div>
       </div>
       <form #loginForm="ngForm"
-            (ngSubmit)="Login(loginForm)">
+            (ngSubmit)="checkLogin(loginForm)">
         <div class="row">
           <div class="col-md-12">
             <div class="form-group">
@@ -50,8 +50,8 @@
                      [(ngModel)]="credentials.password"
                      name="password" required
                      #passwordField="ngModel"/>
-              <div *ngIf="passwordField.touched && emailField.errors">
-                <p *ngIf="emailField.errors.required">
+              <div *ngIf="passwordField.touched && passwordField.errors">
+                <p *ngIf="passwordField.errors.required">
                   <small class="form-text text-danger">
                     Error: Campo requerido
                   </small>

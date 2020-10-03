@@ -1,5 +1,5 @@
-<div (load)="hiddenBottom()" class="row">
-  <div class="col-md-12"
+<div class="p-grid">
+  <div class="p-sm-12"
        style="padding-bottom: 20px">
     <div class="toolbar" role="banner">
       <div class="spacer">
@@ -9,27 +9,46 @@
                  width="100px" alt="main-page-logo"
                  style="background-color: #14acc2"></a>
         </nav>
+        <span>
+
+        </span>
       </div>
     </div>
   </div>
   <!-- Sidebar -->
-  <div class="bg-light border-right" id="sidebar-wrapper">
-    <div class="sidebar-heading text-center pt-5">
-      <img src="/assets/img/logo-photo-ecuador.png"
-           width="80%"
-           alt="photo-logo">
-    </div>
-    <div class="list-group list-group-flush">
-      <a href="#" class="list-group-item list-group-item-action bg-light">Dashboard</a>
-      <a href="#" class="list-group-item list-group-item-action bg-light">Shortcuts</a>
-      <a href="#" class="list-group-item list-group-item-action bg-light">Overview</a>
-      <a href="#" class="list-group-item list-group-item-action bg-light">Events</a>
-      <a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>
-      <a href="#" class="list-group-item list-group-item-action bg-light">Status</a>
+  <div class="p-col-3 pb-0">
+    <div class="border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading text-center pt-5">
+        <img src="/assets/img/logo-photo-ecuador.png"
+             width="70%"
+             alt="photo-logo">
+      </div>
+      <p-panelMenu [model]="items"
+                   [style]="{'width':'20.9rem','padding-top':'40px'}"></p-panelMenu>
     </div>
   </div>
+
+  <!--  scrollPanel-->
+  <div class="p-col-9 main-container">
+    <div class="p-grid">
+      <div class="p-col-12">
+        <p-scrollPanel
+          [style]="{width: '99%', height: '446px'}"
+                       styleClass="custombar2">
+          <div [hidden]=user_create_post class="p-col-12 p-offset-3">
+            <app-create-post></app-create-post>
+          </div>
+          <app-crud-album [hidden]=user_album></app-crud-album>
+          <app-crud [hidden]=user_crud ></app-crud>
+         <div *ngFor="let p of posts" class="p-col-12 p-offset-3">
+           <app-album-post [hidden]=user_posts
+             [imagesArray]="getArrayPhotos()"
+             [post]="p"
+           ></app-album-post>
+         </div>
+        </p-scrollPanel>
+      </div>
+    </div>
+  </div>
+
 </div>
-
-<script>
-
-</script>

@@ -1,0 +1,21 @@
+<div class="p-col-11">
+  <p-panel [style]="{width: '60%'}"
+           class="p-text-center">
+    <p-header>
+    <h5>Nuevo Post</h5>
+    </p-header>
+    <label>Seleccione un Albums</label>
+    <p-dropdown [options]="albums"
+                [(ngModel)]="selectedAlbums2"
+                placeholder="Seleccione un Album"
+                optionLabel="name"></p-dropdown>
+    <p-footer>
+      <button  pButton pRipple
+               type="button"
+               label="Crear Post"
+               (click)="newPost()"
+               icon="pi pi-check"
+               class="p-button-rounded"></button>
+    </p-footer>
+  </p-panel>
+</div>

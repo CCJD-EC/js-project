@@ -11,30 +11,42 @@ export class UserService{
     private readonly _httpClient:HttpClient //Servicio
   ) {
   }
-  traerTodo(){
+  deleteSomeUser(users) : boolean {
+    for (let i=0; i<users.length;i++){
+      this._httpClient.delete(this.url + 'user/' + users[i].id)
+        .subscribe(
+          ()=>console.log('OK!'),
+          (error)=>console.error('Error found',error),
+        );
+    }
+    return true;
+  }
+  getAllUsers(){
     return this._httpClient.get(this.url+'/user');
   }
 
-  //Obtener por ID
-
-  ObtenerUnoPorId(idUsuario:number){
+  getUserByID(userID:number){
     return this._httpClient.get(
-      this.url+'/Usuario/'+ idUsuario
+      this.url+'/user/'+ userID
     );
   }
-  //POST /Usuario
-  crear(user){
+  newUser(user){
     return this._httpClient.post(
-      this.url + '/Usuario', //URL
+      this.url + '/user', //URL
       user
     );
   }
-  //Eliminar usuario
 
-  eliminar(id:number){
+  deleteUser(userID:number){
     return this._httpClient.delete(
-      this.url+'/Usuario/'+id
+      this.url+'/user/'+userID
     );
   }
+  updateUser(user, user_id){
+    return this._httpClient.delete(
+      this.url+'/user/'+user_id, user
+    );
+  }
+
 
 }

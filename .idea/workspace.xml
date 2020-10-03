@@ -11,16 +11,186 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7efdcba4-4ce5-4a0e-9eba-57a0b3dbccec" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/services/http/user.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/img/houndstooth-pattern.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/img/load.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/img/logo-photo-ecuador-main.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/img/logo-photo-ecuador.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/img/portada.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/img/portada1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/img/portada2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/js-backend-photo-ecuador/api/controllers/CommentsController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/js-backend-photo-ecuador/api/controllers/PostController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/js-backend-photo-ecuador/api/models/Comments.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/js-backend-photo-ecuador/api/models/Post.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/components/album-post/album-post.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/components/album-post/album-post.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/components/album-post/album-post.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/components/album-post/album-post.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/components/comment-box/comment-box.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/components/comment-box/comment-box.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/components/comment-box/comment-box.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/components/comment-box/comment-box.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/components/contact-form/contact-form.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/components/contact-form/contact-form.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/components/contact-form/contact-form.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/components/contact-form/contact-form.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/components/create-post/create-post.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/components/create-post/create-post.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/components/create-post/create-post.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/components/create-post/create-post.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/components/crud-album/crud-album.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/components/crud-album/crud-album.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/components/crud-album/crud-album.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/components/crud-album/crud-album.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/components/crud/crud.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/components/crud/crud.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/components/crud/crud.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/components/crud/crud.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/components/opinion-box/opinion-box.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/components/opinion-box/opinion-box.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/components/opinion-box/opinion-box.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/components/opinion-box/opinion-box.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/components/toolbar-main/toolbar-main.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/interface/album.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/interface/comment.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/interface/photo.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/interface/post.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/interface/role.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/interface/user.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/routes/contact-route/contact-route.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/routes/contact-route/contact-route.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/routes/contact-route/contact-route.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/routes/contact-route/contact-route.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/services/auth/auth.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/services/guards/is-admin.guard.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/services/guards/is-login.guard.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/services/guards/is-super.guard.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/services/guards/is-user.guard.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/services/http/album.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/services/http/comment.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/services/http/photo.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/services/http/post.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/services/http/role.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_1/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_1/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_1/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_1/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_1/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_1/6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_1/7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_1/8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_1/9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_2/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_2/10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_2/11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_2/12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_2/13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_2/14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_2/15.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_2/16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_2/17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_2/18.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_2/19.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_2/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_2/20.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_2/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_2/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_2/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_2/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_2/7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_2/8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_2/9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_3/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_3/10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_3/11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_3/12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_3/13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_3/14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_3/15.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_3/16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_3/17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_3/18.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_3/19.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_3/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_3/20.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_3/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_3/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_3/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_3/6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_3/7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_3/8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_3/9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_4/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_4/10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_4/11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_4/12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_4/13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_4/14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_4/15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_4/16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_4/17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_4/18.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_4/19.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_4/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_4/20.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_4/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_4/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_4/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_4/6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_4/7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_4/8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_4/9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_5/speed-1249610_1920.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_5/still-life-562357_1920.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_5/sunrise-1949939_1920.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_5/sunset-2177324_1920.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_5/sunset-3156440_1920.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_5/sunset-3186277_1920.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_5/sunset-3325080_1920.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_5/sunset-3335315_1920.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_5/the-plane-1680980_1920.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_5/tiger-2430625_1920.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_5/tiger-2535888_1920.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_5/tiger-3264048_1920.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_5/tunnel-2033983_1920.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_5/turkey-3048299_1920.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_5/volkswagen-1509784_1920.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_5/warbird-2536187_1920.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_5/water-1761027_1920.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_5/water-3334482_1920.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_5/whale.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_5/wolf-1341881_1920.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_5/wolf-3158282_1920.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_6/0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_6/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_6/10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_6/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_6/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_6/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_6/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_6/6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_6/7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_6/8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/Resource/album_6/9.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/js-backend-photo-ecuador/api/models/Album.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/js-backend-photo-ecuador/api/models/Album.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/js-backend-photo-ecuador/api/models/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/js-backend-photo-ecuador/api/models/User.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/js-backend-photo-ecuador/config/security.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/js-backend-photo-ecuador/config/security.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/components/login-form/login-form.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/components/login-form/login-form.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/components/login-form/login-form.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/components/login-form/login-form.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/components/sign-in-form/sign-in-form.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/components/sign-in-form/sign-in-form.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/components/sign-in-form/sign-in-form.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/components/sign-in-form/sign-in-form.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/components/toolbar-main/toolbar-main.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/components/toolbar-main/toolbar-main.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/components/toolbar-main/toolbar-main.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/components/toolbar-main/toolbar-main.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/components/toolbar-main/toolbar-main.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/components/toolbar/toolbar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/components/toolbar/toolbar.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/routes/login-route/login-route.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/routes/login-route/login-route.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/routes/main-page-route/main-page-route.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/routes/main-page-route/main-page-route.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/routes/sign-in-route/sign-in-route.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/routes/sign-in-route/sign-in-route.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/routes/sign-in-route/sign-in-route.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/routes/sign-in-route/sign-in-route.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/services/http/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/services/http/user.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +201,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -43,10 +214,11 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/img" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/interface" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -62,9 +234,11 @@
       <recent name="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/interface" />
+      <recent name="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/services/http" />
+      <recent name="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/app/services/guards" />
       <recent name="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/assets/img" />
       <recent name="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src" />
-      <recent name="$PROJECT_DIR$/Frontend/js-photo-ecuador-frontend/src/environments" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -82,7 +256,19 @@
       <workItem from="1600538162828" duration="30879000" />
       <workItem from="1600622799280" duration="8264000" />
       <workItem from="1600635920494" duration="15981000" />
-      <workItem from="1600706457020" duration="7708000" />
+      <workItem from="1600706457020" duration="9111000" />
+      <workItem from="1600791627686" duration="599000" />
+      <workItem from="1601049402473" duration="780000" />
+      <workItem from="1601077347969" duration="604000" />
+      <workItem from="1601140144322" duration="846000" />
+      <workItem from="1601154614119" duration="23000" />
+      <workItem from="1601398307947" duration="12895000" />
+      <workItem from="1601415344531" duration="15790000" />
+      <workItem from="1601501367175" duration="47316000" />
+      <workItem from="1601600539318" duration="19685000" />
+      <workItem from="1601659566213" duration="4648000" />
+      <workItem from="1601664242679" duration="9304000" />
+      <workItem from="1601674463508" duration="8052000" />
     </task>
     <servers />
   </component>
@@ -119,13 +305,34 @@
       <screen x="0" y="28" width="1366" height="481" />
     </state>
     <state x="466" y="28" width="424" height="481" key="FileChooserDialogImpl/0.28.1366.481@0.28.1366.481" timestamp="1600542837932" />
-    <state x="347" y="109" key="run.anything.popup" timestamp="1600572463301">
+    <state width="1343" height="85" key="GridCell.Tab.0.bottom" timestamp="1601407630575">
       <screen x="0" y="28" width="1366" height="481" />
     </state>
-    <state x="347" y="109" key="run.anything.popup/0.28.1366.481@0.28.1366.481" timestamp="1600572463301" />
-    <state x="346" y="27" width="672" height="678" key="search.everywhere.popup" timestamp="1600645745257">
+    <state width="1343" height="85" key="GridCell.Tab.0.bottom/0.28.1366.481@0.28.1366.481" timestamp="1601407630575" />
+    <state width="1343" height="154" key="GridCell.Tab.0.bottom/0.28.1366.686@0.28.1366.686" timestamp="1601405381171" />
+    <state width="1343" height="85" key="GridCell.Tab.0.center" timestamp="1601407630572">
       <screen x="0" y="28" width="1366" height="481" />
     </state>
-    <state x="346" y="27" width="672" height="678" key="search.everywhere.popup/0.28.1366.481@0.28.1366.481" timestamp="1600645745257" />
+    <state width="1343" height="85" key="GridCell.Tab.0.center/0.28.1366.481@0.28.1366.481" timestamp="1601407630572" />
+    <state width="1343" height="154" key="GridCell.Tab.0.center/0.28.1366.686@0.28.1366.686" timestamp="1601405381169" />
+    <state width="1343" height="85" key="GridCell.Tab.0.left" timestamp="1601407630572">
+      <screen x="0" y="28" width="1366" height="481" />
+    </state>
+    <state width="1343" height="85" key="GridCell.Tab.0.left/0.28.1366.481@0.28.1366.481" timestamp="1601407630572" />
+    <state width="1343" height="154" key="GridCell.Tab.0.left/0.28.1366.686@0.28.1366.686" timestamp="1601405381168" />
+    <state width="1343" height="85" key="GridCell.Tab.0.right" timestamp="1601407630573">
+      <screen x="0" y="28" width="1366" height="481" />
+    </state>
+    <state width="1343" height="85" key="GridCell.Tab.0.right/0.28.1366.481@0.28.1366.481" timestamp="1601407630573" />
+    <state width="1343" height="154" key="GridCell.Tab.0.right/0.28.1366.686@0.28.1366.686" timestamp="1601405381171" />
+    <state x="347" y="144" key="run.anything.popup" timestamp="1601670573152">
+      <screen x="0" y="28" width="1366" height="686" />
+    </state>
+    <state x="347" y="109" key="run.anything.popup/0.28.1366.481@0.28.1366.481" timestamp="1601584358497" />
+    <state x="347" y="144" key="run.anything.popup/0.28.1366.686@0.28.1366.686" timestamp="1601670573152" />
+    <state x="346" y="27" width="672" height="678" key="search.everywhere.popup" timestamp="1601570741207">
+      <screen x="0" y="28" width="1366" height="481" />
+    </state>
+    <state x="346" y="27" width="672" height="678" key="search.everywhere.popup/0.28.1366.481@0.28.1366.481" timestamp="1601570741207" />
   </component>
 </project>

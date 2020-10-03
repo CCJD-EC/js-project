@@ -1,0 +1,47 @@
+<div class="p-col-11">
+  <p-panel [style]="{width: '60%'}"
+           class="p-text-center">
+    <p-galleria [(value)]="imagesArray"
+                [responsiveOptions]="responsiveOptions"
+                [containerStyle]="{'max-width': '520px'}"
+                [numVisible]="5"
+                [circular]="true"
+                [(visible)]="displayBasic2"
+                [showItemNavigators]="true">
+      <ng-template pTemplate="item" let-item>
+        <img [src]="item.previewImageSrc"
+             style="width: 100%; display: block;"/>
+      </ng-template>
+      <ng-template pTemplate="thumbnail" let-item>
+        <div class="p-grid p-nogutter p-justify-center">
+          <img [src]="item.thumbnailImageSrc"
+               style="display: block; width: 60%" />
+        </div>
+      </ng-template>
+    </p-galleria>
+    <p-footer>
+      <div class="p-grid">
+        <div class="p-col-12 p-text-right p-pt-20">
+          <p-rating [(ngModel)]="val_rating"></p-rating>
+        </div>
+        <div class="p-col-12 p-text-left">
+          <div>
+            <app-opinion-box
+            [post]="getPostInfo()">
+            </app-opinion-box>
+          </div>
+        </div>
+      </div>
+      <div class="p-grid">
+        <div *ngFor="let comment of comments"
+             class="p-col-12">
+          <app-comment-box
+            [photo]="getPhotoUser(comment)"
+            [user_name]="getUserName(comment)"
+            [description]="comment.description">
+          </app-comment-box>
+        </div>
+      </div>
+    </p-footer>
+  </p-panel>
+</div>

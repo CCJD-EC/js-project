@@ -26,6 +26,11 @@ module.exports = {
       via: 'album_photo',
     },
 
+    album_posts:{
+      collection: 'post',
+      via: 'album'
+    }
+
   },
 
 };

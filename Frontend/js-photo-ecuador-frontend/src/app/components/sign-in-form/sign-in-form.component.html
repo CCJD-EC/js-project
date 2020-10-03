@@ -189,7 +189,7 @@
                      class="form-control"
                      placeholder="mario.perez@gmail.com"
                      type="email"
-                     [(ngModel)]="user.email"
+                     [(ngModel)]="user.emailAddress"
                      name="email" required
                      #emailField="ngModel"/>
               <div *ngIf="emailField.touched && emailField.errors">
@@ -236,11 +236,11 @@
                 <b>Confirmar Password:</b>
               </label>
               <input id="confirmPasswordId"
-                     type="confirmPassword"
+                     type="password"
                      placeholder="*********"
                      class="form-control"
                      minlength="8"
-                     [(ngModel)]="user.confirmPassword"
+                     [(ngModel)]="confirmPassword"
                      name="confirmPassword" required
                      #confirmPasswordField="ngModel"/>
               <div *ngIf="confirmPasswordField.touched && confirmPasswordField.errors">

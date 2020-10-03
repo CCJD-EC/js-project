@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {NgForm} from "@angular/forms";
+import {AuthService} from "../../services/auth/auth.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-login-route',
@@ -7,7 +10,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginRouteComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private readonly _authService:AuthService,
+    private readonly _router: Router
+  ) { }
 
   ngOnInit(): void {
   }

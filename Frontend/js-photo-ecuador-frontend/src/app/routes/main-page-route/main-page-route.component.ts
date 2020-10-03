@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FooterComponent} from "../../components/footer/footer.component";
+import {ActivatedRoute} from "@angular/router";
+import {UserService} from "../../services/http/user.service";
 
 @Component({
   selector: 'app-main-page-route',
@@ -8,9 +10,32 @@ import {FooterComponent} from "../../components/footer/footer.component";
 })
 export class MainPageRouteComponent implements OnInit {
   isHidden:boolean = new FooterComponent().isHidden;
-  constructor() { }
+  user;
+  isHiddenComponent:boolean= true;
+  constructor(
+    private readonly _activatedRoute: ActivatedRoute,
+    private readonly _userService: UserService
+  ) { }
 
   ngOnInit(): void {
+/*    const obsRoute = this._activatedRoute.params;
+    obsRoute
+      .subscribe(
+        (parameters)=>{
+          const id = Number(parameters.id);
+          const obsUsuario = this._userService
+            .getUserByID(id);
+          obsUsuario
+            .subscribe(
+              (user:any)=>{
+                this.user = user;
+              },
+              (error)=>{
+                console.log('Error', error);
+              }
+            );
+        }
+      );*/
   }
 
 }
